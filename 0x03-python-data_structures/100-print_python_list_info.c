@@ -5,9 +5,10 @@
 /**
  * print_python_list_info - Prints basic information about a Python list
  * @p: Pointer to the Python list.
+ * Return: success 1, failure 0
  */
 
-void print_python_list_into(PyObject *p)
+void print_python_list_info(PyObject *p)
 {
 	PyListObject *list;
 	Py_ssize_t size, i;

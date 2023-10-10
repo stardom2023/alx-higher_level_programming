@@ -2,18 +2,10 @@
 def print_matrix_integer(matrix=[[]]):
     for row in matrix:
         for i, num in enumerate(row):
-            if i != 0:
-                print(" ", end="")
-            print("{:d}".format(num), end="")
-        print()
-
-if __name__ == "__main__":
-    matrix = [
-            [1, 2, 3],
-            [4, 5, 6],
-            [7, 8, 9]
-    ]
-
-    print_matrix_integer(matrix)
-    print("--")
-    print_matrix_integer()
+            if i == len(row) - 1:
+                # Print the last element of the row without a trailing space
+                print("{:d}".format(num), end="")
+            else:
+                # Print the element with a trailing space
+                print("{:d}".format(num), end=" ")
+        print()  # Move to the next line after printing each row

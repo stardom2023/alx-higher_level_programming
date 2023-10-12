@@ -13,8 +13,8 @@ void print_python_list(PyObject *p) {
 			item = PyList_GetItem(p, i);
 			printf("Element %ld: %s\n", i, Py_TYPE(item)->tp_name);
 		}
-	} else {
-		printf(" [ERROR] Invalid List Object\n");
+	} else		{
+		printf("  [ERROR] Invalid List Object\n");
 	}
 }
 
@@ -26,9 +26,9 @@ void print_python_bytes(PyObject *p) {
 		size = ((PyVarObject *)p)->ob_size;
 		str = ((PyBytesObject *)p)->ob_sval;
 		printf("[.] bytes object info\n");
-		printf(" size: %ld\n", size);
-		printf(" trying string: %s\n", str);
-		printf(" first %ld bytes: ", (size > 10) ? 10 : size);
+		printf("  size: %ld\n", size);
+		printf("  trying string: %s\n", str);
+		printf("  first %ld bytes: ", (size > 10) ? 10 : size);
 		for (i = 0; i < size && i < 10; i++) {
 			printf("%02hhx%s", str[i], (i + 1 < size && i < 9) ? " " : "");
 		}

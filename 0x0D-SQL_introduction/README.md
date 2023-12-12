@@ -1,0 +1,1 @@
+This project titled 0x0D-SQL_introduction is the first project in SQL. We have 20 exercises that will test our basic knowledge of the new language and help us understand the basic and introductory part of the new language, SQL.
